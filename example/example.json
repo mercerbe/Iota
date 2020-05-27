@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "autostart": false,
+    "grouped": false
+  },
+  "columns": [{ "text": "table column label", "value": "key from api" }],
+  "filters": {
+    "users": {
+      "endpoint": "services/users",
+      "method": "GET",
+      "args": {},
+      "text": "userName",
+      "value": "userId"
+    },
+    "activities": {
+      "endpoint": "services/activity-types",
+      "method": "GET",
+      "args": {},
+      "text": "text",
+      "value": "value"
+    },
+    "companies": {
+      "endpoint": "services/companies",
+      "method": "GET",
+      "args": { "type": "parentCompany" },
+      "text": "name",
+      "value": "companyId"
+    }
+  },
+  "trigger": {
+    "type": "endpoint",
+    "endpoint": "services/ch-ua-report"
+  }
+}
